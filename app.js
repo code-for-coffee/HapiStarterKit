@@ -4,7 +4,10 @@ require('dotenv').config();
 
 const Hapi = require('hapi');
 const server = new Hapi.Server({
-    debug: { request: ['error'] }
+    debug: {
+        request: ['error'],
+        log: ['error', 'debug']
+    }
 });
 
 server.connection({
@@ -12,9 +15,8 @@ server.connection({
 });
 
 server.start(function(err) {
-    server.log(['start', 'app.js'], server.info);
     if (err) {
-        server.log(['error', 'app.js'], err);
+        server.server.log(['error', 'app.js'], err);
     }
     console.log('[hapi] server hosted on ', server.info.uri);
 });
