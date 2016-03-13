@@ -1,0 +1,17 @@
+{
+  "name": "hapistarterkit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node_modules/jasmine-node/bin/jasmine-node spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "hapi": "^13.2.1",
+    "jasmine-node": "^1.14.5"
+  }
+}
