@@ -8,7 +8,7 @@ describe('DotEnv KeyValuePair Tests', function () {
         app = require('../app');
     });
     it('should start and be hosted', function() {
-        console.log(app.info);
+        //console.log(app.info);
         expect(app.info.uri).toBeTruthy();
     });
     it('should be listening on an open port', function() {
